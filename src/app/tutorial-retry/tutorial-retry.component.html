@@ -1,0 +1,20 @@
+<h1>Retry component sample</h1>
+
+<p>The service is initialized at an error state to show off the retry functionality.</p>
+
+<ng-container *ngIf="serviceLoading">
+  <div class="d-flex justify-content-center">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="serviceError">
+  <app-retry
+    [tryAgainObservable]="serviceObservablePipe"
+  ></app-retry>
+</ng-container>
+
+<ng-container *ngIf="!serviceLoading && !serviceError">
+  <h2>Results</h2>
+  <pre class="results-container">{{ serviceResponse | json }}</pre>
+</ng-container>

@@ -1,9 +1,17 @@
 <div class="card">
-  <div class="card-body">
-    <p>There was an error. Retry?</p>
+  <div class="card-body text-center">
+    <p>
+      <fa-icon icon="times-circle" size="3x" class="mr-2 gray-icon"></fa-icon>
+    </p>
 
-    <button class="btn btn-primary" (click)="retry()">
-      Retry
-    </button>
+    <p>
+      There was an error during loading.
+    </p>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-primary right" (click)="retry()">
+        <fa-icon icon="sync" class="mr-2"></fa-icon>Retry
+      </button>
+    </div>
   </div>
 </div>

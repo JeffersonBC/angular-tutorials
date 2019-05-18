@@ -6,6 +6,7 @@ import { TutorialRetryRoutingModule } from './tutorial-retry-routing.module';
 import { TutorialRetryComponent } from './tutorial-retry.component';
 import { RetryComponent } from './retry/retry.component';
 import { SharedModule } from '../shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     TutorialRetryRoutingModule,
 
     SharedModule,
+    FontAwesomeModule,
   ],
   declarations: [
     TutorialRetryComponent,

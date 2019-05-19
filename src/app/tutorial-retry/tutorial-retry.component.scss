@@ -1,4 +1,9 @@
-
+.error-container {
+    > div {
+        max-width: 600px;
+        width: 100%;
+    }
+}
 
 .results-container {
     overflow-x: auto;

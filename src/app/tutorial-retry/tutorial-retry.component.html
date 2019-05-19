@@ -8,11 +8,13 @@
   </div>
 </ng-container>
 
-<ng-container *ngIf="serviceError">
-  <app-retry
-    [tryAgainObservable]="serviceObservablePipe"
-  ></app-retry>
-</ng-container>
+<div class="error-container d-flex justify-content-center" *ngIf="serviceError">
+  <div>
+    <app-retry
+      [tryAgainObservable]="serviceObservablePipe"
+    ></app-retry>
+  </div>
+</div>
 
 <ng-container *ngIf="!serviceLoading && !serviceError">
   <h2>Results</h2>
